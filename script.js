@@ -97,9 +97,9 @@ let gameData = {
                 type: "image_choice"
             },
             {
-                price: 400,
+                price: 200,
                 question: "расставить нас в порядке знакомства",
-                answer: "Тамара(16-17),Ханна,Рут,Даша", 
+                answer: "Тамара,Ханна,Рут,Даша", 
                 asked: false, 
                 type: "text"
             },
@@ -162,9 +162,9 @@ let gameData = {
             {
                 price: 400,
                 question: "Любимое животное",
-                options: ["Котик", "Шенок", "Хомяк", "Черепаха"],
+                options: ["Котик", "Щенок", "Хомяк", "Черепаха"],
                 correctOptionIndex: 1,
-                answer: "Шенок",
+                answer: "Щенок",
                 answerImage: "assets/fav/fav4.jpg",
                 asked: false,
                 type: "multiple_choice_image_answer"
@@ -1413,15 +1413,7 @@ function saveQuestionEdit(category, price) {
 
 
 
-
-
-
-
-// Add this code to make sure the reset button works
-
-// Make sure this code runs after the page has loaded
 document.addEventListener('DOMContentLoaded', function () {
-    // Add direct event listener to the reset button
     const resetButton = document.getElementById('reset-btn');
     if (resetButton) {
         resetButton.addEventListener('click', function () {
@@ -1432,10 +1424,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-// Reset game state function - make sure this exists in your code
 function resetGameState() {
     if (confirm('Вы уверены, что хотите начать игру сначала? Это сбросит все вопросы и счет команд.')) {
-        // Reset all questions to not asked
         for (let category = 0; category < gameData.questions.length; category++) {
             for (let price = 0; price < gameData.questions[category].length; price++) {
                 if (gameData.questions[category][price]) {
@@ -1444,15 +1434,12 @@ function resetGameState() {
             }
         }
 
-        // Reset all team scores to 0
         teams.forEach(team => {
             team.score = 0;
         });
 
-        // Save the reset state
         saveGameState();
 
-        // Update the UI
         initBoard();
         initScoreBoard();
 
