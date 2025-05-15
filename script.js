@@ -99,7 +99,7 @@ let gameData = {
             {
                 price: 400,
                 question: "расставить нас в порядке знакомства",
-                answer: "Тамара(16-17),", 
+                answer: "Тамара(16-17),Ханна,Рут,Даша", 
                 asked: false, 
                 type: "text"
             },
@@ -132,7 +132,7 @@ let gameData = {
             {
                 price: 100,
                 question: "Любимая еда",
-                options: ["Лапша", "Лопша", "Лопшо", "Эчпочмак"],
+                options: ["Лапша", "Лопша", "Лпша", "Эчпочмак"],
                 correctOptionIndex: 1,
                 answer: "Лопша",
                 answerImage: "assets/fav/fav2.jpg",
@@ -215,9 +215,8 @@ let gameData = {
             {
                 price: 400,
                 question: "Угадайте мелодию:",
-                audioSrc: "assets/audio/melody1.mp3",
+                audioSrc: "assets/audio/smusic.mp3",
                 answer: "Название песни",
-                answerAudio: "assets/audio/melody1_full.mp3",
                 asked: false,
                 type: "audio_question"
             },
